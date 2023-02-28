@@ -1,3 +1,4 @@
+// 2.	Sukurti komponentą, kuris gauną vieną props. Props yra bet koks tekstas, kuris komponente atvaizduojamas h1 tage.
 import "./App.scss";
 import Uzd02 from "./Components/React base/Uzd02";
 
