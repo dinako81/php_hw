@@ -1,8 +1,6 @@
 
 <!-- 
 
- 
-8. Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. Parašykite programą, kuri skaičiuos žvakių kainą ir atspausdintų atsakymą kiek žvakių ir kokia kaina perkama. Žvakių kiekį generuokite ​rand()​ funkcija nuo 5 iki 3000.
 9. Naudokite funkcija rand(). Sukurkite tris kintamuosius su atsitiktinėm reikšmėm nuo 0 iki 100. Paskaičiuokite jų aritmetinį vidurkį. Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90. Abu vidurkius atspausdinkite. Rezultatus apvalinkite iki sveiko skaičiaus.
 10. Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes. Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją rand(). Sugeneruokite skaičių nuo 0 iki 300. Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir pridedamų sekundžių skaičių.
 
@@ -47,28 +45,21 @@ echo '<br>';
 echo '***********************';
 echo '<br>';
 // 3. Naudokite funkcija rand(). Sukurkite tris kintamuosius ir naudodamiesi funkcija rand() jiems priskirkite atsitiktines reikšmes nuo 0 iki 25. Raskite ir atspausdinkite kintąmąjį turintį vidurinę reikšmę.
-
 $a = rand(0, 25);
 $b = rand(0, 25);
 $c = rand(0, 25);
 echo $a .' '. $b.' '. $c;
 
-// if (a$ < $c > $b) {
-//     echo $c; 
-// }if else (b$ < $a >$c) {
-//     echo $a; 
-// }if else (c$ < $b >$a) {
-//     echo $b; 
-// }
+$result = $a + $b + $c- max($a, $b, $c) - min($a, $b, $c);
+echo "<p>$result</p>";
 
-echo '<br>';
 echo '***********************';
 echo '<br>';
 // 4. Įvedami skaičiai -a, b, c –kraštinių ilgiai, trys kintamieji (naudokite ​rand()​ funkcija nuo 1 iki 10). Parašykite PHP programą, kuri nustatytų, ar galima sudaryti trikampį ir atsakymą atspausdintų. 
 $a = rand(1, 10);
 $b = rand(1, 10);
 $c = rand(1, 10);
-echo $a .' '. $b.' '. $c;
+echo "$a $b $c";
 echo '<br>';
 
 if ($a + $b > $c && $a + $c > $b && $b + $c > $a) {
@@ -85,7 +76,7 @@ $a = rand(0, 2);
 $b = rand(0, 2);
 $c = rand(0, 2);
 $d = rand(0, 2);
-echo $a .' '. $b.' '. $c. ' '. $d;
+echo "$a $b $c $d";
 
 $nuliu = 0;
 $vienetu = 0;
@@ -133,45 +124,40 @@ echo '<br>';
 //  6. Naudokite funkcija rand(). Sugeneruokite atsitiktinį skaičių nuo 1 iki 6 ir jį atspausdinkite atitinkame h tage. Pvz skaičius 3- rezultatas: <h3>3</h3>
 $number = rand(1, 6);
 echo "<h$number> $number </h$number>";
+
 echo '<br>';
 echo '***********************';
 echo '<br>';
 //  7. Naudokite funkcija rand(). Atspausdinkite 3 skaičius nuo -10 iki 10. Skaičiai mažesni už 0 turi būti žali, 0 - raudonas, didesni už 0 mėlyni.
+$a = rand(-10, 10);
+$b = rand(-10, 10);
+$c = rand(-10, 10);
+echo "$a, $b, $c";
 
-// $ThreeDigitRandomNumber = mt_rand(-10,10);
-// echo $ThreeDigitRandomNumber;
-
-$x = 3; // Amount of digits
-$nuo = pow(-10,$x);
-$iki = pow(10,$x);
-$value = rand($nuo, $iki);
-
-echo $value;
-
-if ($value < 0) {
-        echo '<p style="color: green">$value</p>';
-    } elseif ($value == 0) {
-        echo '<p style="color: "crimson">$value</p>';
-    } elseif ($value > 0) {
-        echo '<p style="color: blue">$value</p>';
+if ($a < 0) {
+    echo '<p style="color: green">' . $a . '</p>';
+}if ($a == 0) {
+    echo '<p style="color: red">' . $a . '</p>';
     }
+if ($a > 0) {
+    echo '<p style="color: blue">' . $a . '</p>';
+    }
+if ($b < 0) {
+    echo '<p style="color: green">' . $b . '</p>';
+}if ($b == 0) {
+    echo '<p style="color: red">' . $b . '</p>';
+    }
+if ($b > 0) {
+    echo '<p style="color: blue">' . $b . '</p>';
+    }   
+if ($b < 0) {
+    echo '<p style="color: green">' . $b . '</p>';
+}
+if ($b == 0) {
+    echo '<p style="color: red">' . $b . '</p>';
+}
+if ($b > 0) {
+    echo '<p style="color: blue">' . $b . '</p>';
+    }  
 
-// $ThreeDigitRandomNumber = mt_rand(100,999);
-// echo $ThreeDigitRandomNumber;
-
-// if ($ThreeDigitRandomNumber < 0) {
-//         echo '<p style="color: green"> $ThreeDigitRandomNumber</p>';
-//     } elseif ($ThreeDigitRandomNumber == 0) {
-//         echo '<p style="color: "crimson"> $ThreeDigitRandomNumber </p>';
-//     } elseif ($ThreeDigitRandomNumber > 0) {
-//         echo '<p style="color: blue"> $ThreeDigitRandomNumber </p>';
-//     }
-
-
-// if ($skaicius1 < 0 || $skaicius2 < 0 || $skaicius3 < 0) {
-//     echo '<p style="color: green"> AAAAA </p>';
-// } elseif ($skaicius1 == 0 || $skaicius2 == 0 || $skaicius3 == 0) {
-//     echo '<p style="color: "crimson"> $number </p>';
-// } elseif ($skaicius1 > 0 || $skaicius2 > 0 || $skaicius3 > 0) {
-//     echo '<p style="color: blue"> $number </p>';
-// }
+// 8. Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. Parašykite programą, kuri skaičiuos žvakių kainą ir atspausdintų atsakymą kiek žvakių ir kokia kaina perkama. Žvakių kiekį generuokite ​rand()​ funkcija nuo 5 iki 3000.
