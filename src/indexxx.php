@@ -1,11 +1,4 @@
 
-<!-- 
-
-9. Naudokite funkcija rand(). Sukurkite tris kintamuosius su atsitiktinėm reikšmėm nuo 0 iki 100. Paskaičiuokite jų aritmetinį vidurkį. Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90. Abu vidurkius atspausdinkite. Rezultatus apvalinkite iki sveiko skaičiaus.
-10. Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes. Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją rand(). Sugeneruokite skaičių nuo 0 iki 300. Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir pridedamų sekundžių skaičių.
-
-11. Papildomas.
-Naudokite funkcija rand(). Sugeneruokite 6 kintamuosius su atsitiktinem reikšmėm nuo 1000 iki 9999. Atspausdinkite reikšmes viename strige, išrūšiuotas nuo didžiausios iki mažiausios, atskirtas tarpais. Naudoti ciklų ir masyvų NEGALIMA.     -->
 <?php
 echo '<br>';
 echo '***********************';
@@ -17,7 +10,7 @@ $surname = 'Petrauskas';
 $born_year = 1881;
 $this_year = 2023;
 $me_year = $this_year-$born_year;
-echo 'Aš esu '. $name .' '. $surname . '. ' . 'Man yra ' . $me_year .' '. 'metai.';
+echo "Aš esu $name $surname. Man yra $me_year metai.";
 
 echo '<br>';
 echo '***********************';
@@ -36,11 +29,9 @@ echo '<br>';
 } else if ($b > $a && $a!=0) { 
     echo(round(($b / $a), 2));
    } 
-   else if ($b == $a) { 
+else if ($b == $a) { 
     echo 'Skaiciai yra lygus';
    } 
-
-
 echo '<br>';
 echo '***********************';
 echo '<br>';
@@ -160,4 +151,64 @@ if ($b > 0) {
     echo '<p style="color: blue">' . $b . '</p>';
     }  
 
+echo '<br>';
+echo '***********************';
+echo '<br>';
 // 8. Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. Parašykite programą, kuri skaičiuos žvakių kainą ir atspausdintų atsakymą kiek žvakių ir kokia kaina perkama. Žvakių kiekį generuokite ​rand()​ funkcija nuo 5 iki 3000.
+$a = rand(5, 3000);
+echo $a;
+echo '<br>';
+
+if ($a <= 1000) {
+    $kaina = $a * 1;
+    echo "Perkama: $a zvakiu uz $kaina eur.";
+} else if ($a > 1000) {
+    $kaina1 = $a * (1-0.03);
+    echo "Perkama: $a zvakiu uz $kaina1 eur.";
+} else if ($a > 2000) {
+    $kaina2 = $a * (1-0.04);
+    echo "Perkama: $a zvakiu uz $kaina2 eur.";
+}
+
+echo '<br>';
+echo '***********************';
+echo '<br>';
+// 9. Naudokite funkcija rand(). Sukurkite tris kintamuosius su atsitiktinėm reikšmėm nuo 0 iki 100. Paskaičiuokite jų aritmetinį vidurkį. Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90. Abu vidurkius atspausdinkite. Rezultatus apvalinkite iki sveiko skaičiaus.
+$a = rand(0, 1000);
+$b = rand(0, 1000);
+$c = rand(0, 1000);
+
+$aritmetinsVidurkis = (round($a+$b+$c/3));
+echo "Aritmetini vidurkis: $aritmetinsVidurkis.";
+
+
+
+
+
+echo '<br>';
+echo '***********************';
+echo '<br>';
+// 10. Padarykite skaitmeninį laikrodį, rodantį valandas, minutes ir sekundes. Valandom, minutėm ir sekundėm sugeneruoti panaudokite funkciją rand(). Sugeneruokite skaičių nuo 0 iki 300. Tai papildomos sekundės. Skaičių pridėkite prie jau sugeneruoto laiko. Atspausdinkite laikrodį prieš ir po sekundžių pridėjimo ir pridedamų sekundžių skaičių.
+
+$a = rand(0, 24);
+$b = rand(0, 60);
+$c = rand(0, 60);
+echo "$a $b $c";
+echo '<br>';
+
+$papildomi = rand(0, 300);
+echo $papildomi;
+
+echo '<br>';
+echo '***********************';
+echo '<br>';
+// 11. Papildomas.
+// Naudokite funkcija rand(). Sugeneruokite 6 kintamuosius su atsitiktinem reikšmėm nuo 1000 iki 9999. Atspausdinkite reikšmes viename strige, išrūšiuotas nuo didžiausios iki mažiausios, atskirtas tarpais. Naudoti ciklų ir masyvų NEGALIMA. 
+$a = rand(1000, 9999);
+$b = rand(1000, 9999);
+$c = rand(1000, 9999);  
+$d = rand(1000, 9999);
+$e = rand(1000, 9999);
+$f = rand(1000, 9999); 
+
+echo "$a-$b-$c-$d-$e-$f";
