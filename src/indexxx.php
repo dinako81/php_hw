@@ -270,18 +270,37 @@ echo '<br>';
 $sakinys = "An American in Paris";
 echo str_replace(array('a', 'A'),array('*', '*'),$sakinys);
 echo '<br>';
-echo '************5***********';
+echo '************6***********';
 echo '<br>';
 // 6.Sukurti kintamąjį su stringu: “An American in Paris”. Suskaičiuoti visas “a” (didžiąsias ir mažąsias) raides. Rezultatą atspausdinti.
 $sakinys6 = "An American in Paris";
-echo substr_count($sakinys6, 'a');
-echo substr_count($sakinys6, 'A');
+echo $total = substr_count($sakinys6, 'a') + substr_count($sakinys6, 'A');
 
 echo '<br>';
-echo '************5***********';
+echo '************7***********';
 echo '<br>';
 // 7. Sukurti kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses. Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”, “2001: A Space Odyssey” ir “It's a Wonderful Life”.
 
+$sakinys1 = "An American in Paris";
+$vovels = array('a', 'A', 'e', 'E', 'o', 'O', 'i', 'I', 'u', 'U' );
+echo str_replace($vovels,"", $sakinys1);
+
+echo '<br>';
+echo '************8***********';
+echo '<br>';
+// 8.Stringe, kurį generuoja toks kodas: 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope'; Surasti ir atspausdinti epizodo numerį.
+
+
+echo '<br>';
+echo '************9***********';
+echo '<br>';
+// 9. Suskaičiuoti kiek stringe “Don't Be a Menace to South Central While Drinking Your Juice in the Hood” yra žodžių trumpesnių arba lygių nei 5 raidės. Pakartokite kodą su stringu “Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale”.
+
+
+echo '<br>';
+echo '************10***********';
+echo '<br>';
+// 10.Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
 
 
 
