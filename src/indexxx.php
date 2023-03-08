@@ -181,9 +181,18 @@ $c = rand(0, 1000);
 $aritmetinsVidurkis = (round($a+$b+$c/3));
 echo "Aritmetini vidurkis: $aritmetinsVidurkis.";
 
+$count = 3;
+$sum = ($a + $b + $c);
 
-
-
+if ($a < 10 && $aa > 90) {
+    $sum - $a;
+}
+if ($b < 10 && $b > 90) {
+    $sum - $b;
+}
+if ($c < 10 && $c > 90) {
+    $sum - $c;
+}
 
 echo '<br>';
 echo '***********************';
@@ -211,4 +220,69 @@ $d = rand(1000, 9999);
 $e = rand(1000, 9999);
 $f = rand(1000, 9999); 
 
-echo "$a-$b-$c-$d-$e-$f";
+echo $a,'-', $b,'-',$c,'-',$d,'-',$e,'-',$f;
+
+echo '<br>';
+echo '************1***********';
+echo '<br>';
+// STRINGAI
+// 1. Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis). Atspausdinti trumpesnį stringą.
+ $vardas = 'Ogis';
+ $pavarde = 'Tarakonas';
+
+ if ($vardas < $pavarde){
+    echo $vardas;
+ } else echo $pavarde;
+
+ echo '<br>';
+ echo '************2***********';
+ echo '<br>';
+//  2.Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Vardą atspausdinti tik didžiosiom raidėm, o pavardę tik mažosioms
+
+$vardas1 = 'Ogis';
+$pavarde1 = 'Tarakonas';
+
+echo strtoupper($vardas1);
+echo '<br>';
+echo strtolower($pavarde1);
+
+echo '<br>';
+echo '************3***********';
+echo '<br>';
+// 3.Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš pirmų vardo ir pavardės kintamųjų raidžių. Jį atspausdinti.
+
+$vardas3 = 'Ogis';
+$pavarde3 = 'Tarakonas';
+echo sprintf("%s%s",substr($vardas3, 0,1),substr($pavarde3, 0, 1));
+echo '<br>';
+echo '************4***********';
+echo '<br>';
+// 4.Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš trijų paskutinių vardo ir pavardės kintamųjų raidžių. Jį atspausdinti.
+
+$vardas4 = 'Ogis';
+$pavarde4 = 'Tarakonas';
+echo sprintf("%s%s",substr($vardas4, -3),substr($pavarde4, -3));
+echo '<br>';
+echo '************5***********';
+echo '<br>';
+// 5.Sukurti kintamąjį su stringu: “An American in Paris”. Jame visas “a” (didžiąsias ir mažąsias) pakeisti žvaigždutėm “*”.  Rezultatą atspausdinti.
+
+$sakinys = "An American in Paris";
+echo str_replace(array('a', 'A'),array('*', '*'),$sakinys);
+echo '<br>';
+echo '************5***********';
+echo '<br>';
+// 6.Sukurti kintamąjį su stringu: “An American in Paris”. Suskaičiuoti visas “a” (didžiąsias ir mažąsias) raides. Rezultatą atspausdinti.
+$sakinys6 = "An American in Paris";
+echo substr_count($sakinys6, 'a');
+echo substr_count($sakinys6, 'A');
+
+echo '<br>';
+echo '************5***********';
+echo '<br>';
+// 7. Sukurti kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses. Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”, “2001: A Space Odyssey” ir “It's a Wonderful Life”.
+
+
+
+
+?>
