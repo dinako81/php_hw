@@ -284,6 +284,22 @@ echo '<br>';
 $sakinys1 = "An American in Paris";
 $vovels = array('a', 'A', 'e', 'E', 'o', 'O', 'i', 'I', 'u', 'U' );
 echo str_replace($vovels,"", $sakinys1);
+echo '<br>';
+
+$sakinys2 = "Breakfast at Tiffany's";
+$vovels = array('a', 'A', 'e', 'E', 'o', 'O', 'i', 'I', 'u', 'U' );
+echo str_replace($vovels,"", $sakinys2);
+echo '<br>';
+
+$sakinys3 = "2001: A Space Odyssey";
+$vovels = array('a', 'A', 'e', 'E', 'o', 'O', 'i', 'I', 'u', 'U' );
+echo str_replace($vovels,"", $sakinys3);
+echo '<br>';
+
+$sakinys4 = "It's a Wonderful Life";
+$vovels = array('a', 'A', 'e', 'E', 'o', 'O', 'i', 'I', 'u', 'U' );
+echo str_replace($vovels,"", $sakinys4);
+echo '<br>';
 
 echo '<br>';
 echo '************8***********';
