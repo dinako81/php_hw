@@ -318,6 +318,21 @@ echo '************10***********';
 echo '<br>';
 // 10.Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
 
+$n = 3;
+
+function getRandomString($n) {
+  $vovels = 'aoeui'; 
+  $string = '';
+  
+  for ($i = 0; $i < $n; $i++) {
+    $index = rand(0, strlen($vovels) - 1);
+    $string .= $vovels[$index];
+}
+return $string;
+}
+
+echo getRandomString($n);
+
 
 
 ?>
