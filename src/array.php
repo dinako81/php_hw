@@ -7,6 +7,12 @@ $nums = array();
 for($i=0; $i<30; $i++){
     echo $nums [] = rand(5, 25). ' ';
 }
+
+foreach(range(0, 30) as $x1) {
+echo 'Numeris: '. $x1 . '<br>';
+
+}
+
  
 echo '<pre>';
 print_r($nums);
