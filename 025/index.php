@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "
         INSERT INTO trees
         (name, heigth, type)
-        VALUES (?, ?, ?)
+        VALUES ('".$_POST['name']."', ".$_POST['heigth'].", ".$_POST['type'].")
         ";
 
         $pdo->query($sql);
